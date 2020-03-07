@@ -18,8 +18,8 @@ This Alpine-based Docker image runs a CUPS instance that is meant as an AirPrint
 ### Example run command:
 ```
 docker run --name cups --restart unless-stopped  --net host\
-  -v <your services dir>:/services \
-  -v <your config dir>:/config \
+  -v /etc/avahi/services:/services \
+  -v /etc/cups/config:/config \
   -e CUPSADMIN="admin" \
   -e CUPSPASSWORD="-Cups31-" \
   mauricelumiere/cups-avahi-airprint:latest
