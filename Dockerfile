@@ -17,6 +17,8 @@ RUN echo "http://nl.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositorie
 	build-base \
 	wget \
 	rsync \
+	gutenprint \
+	gutenprint-cups \
 	&& pip --no-cache-dir install --upgrade pip \
 	&& pip install pycups \
 	&& rm -rf /var/cache/apk/*
